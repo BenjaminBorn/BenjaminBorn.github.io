@@ -36,8 +36,6 @@
       h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 0.5rem 0; }
       p  { margin: 0.5rem 0; font-size: 1.05rem; }
       .muted { color: var(--muted); }
-      .stack { display: grid; gap: 0.25rem; }
-      .label { font-weight: 600; letter-spacing: .02em; }
       a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
       footer { margin-top: 1.25rem; font-size: 0.9rem; }
       .pill {
@@ -67,18 +65,11 @@
     <main>
       <h1>Benjamin Born</h1>
       <p class="muted">Professor of Macroeconomics</p>
+      <p class="muted">University of Bonn</p>
 
-      <div class="stack" role="group" aria-labelledby="contact-heading">
-        <p id="contact-heading" class="label">Contact</p>
-        <p>
-          Email:
-          <a href="mailto:b.born@uni-bonn.de">b.born@uni-bonn.de</a>
-        </p>
-      </div>
-
-      <div class="stack" role="group" aria-labelledby="aff-heading" style="margin-top:1rem">
-        <p id="aff-heading" class="label">Institution</p>
-        <p>University of Bonn</p>
+      <div style="margin-top: 1rem;">
+        <p>Email: <a href="mailto:b.born@uni-bonn.de">b.born@uni-bonn.de</a></p>
+        <p><a href="Born_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a></p>
       </div>
 
       <footer class="muted">
