@@ -1,80 +1,116 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Benjamin Born</title>
-    <meta name="description" content="Professor of Macroeconomics at the University of Bonn." />
-    <meta property="og:title" content="Benjamin Born" />
-    <meta property="og:description" content="Professor of Macroeconomics at the University of Bonn." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.benjaminborn.de/" />
-    <style>
-      :root { --bg: #ffffff; --fg: #0f172a; --muted: #475569; --card: #f8fafc; }
-      @media (prefers-color-scheme: dark) {
-        :root { --bg: #0b1220; --fg: #e5e7eb; --muted: #9ca3af; --card: #0f172a; }
-      }
-      html, body { height: 100%; }
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--fg);
-        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-        line-height: 1.6;
-        display: grid;
-        place-items: center;
-        padding: 2rem;
-      }
-      main {
-        width: 100%;
-        max-width: 720px;
-        background: var(--card);
-        border-radius: 1.25rem;
-        padding: 2.5rem;
-        box-shadow: 0 10px 30px rgba(0,0,0,.06);
-      }
-      h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 0.5rem 0; }
-      p  { margin: 0.5rem 0; font-size: 1.05rem; }
-      .muted { color: var(--muted); }
-      a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
-      footer { margin-top: 1.25rem; font-size: 0.9rem; }
-      .pill {
-        display: inline-block; padding: 0.25rem 0.6rem; border-radius: 999px;
-        background: rgba(0,0,0,.06);
-      }
-      @media (prefers-color-scheme: dark) {
-        .pill { background: rgba(255,255,255,.06); }
-      }
-    </style>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Benjamin Born",
-      "url": "https://www.benjaminborn.de/",
-      "email": "mailto:b.born@uni-bonn.de",
-      "jobTitle": "Professor of Macroeconomics",
-      "affiliation": {
-        "@type": "Organization",
-        "name": "University of Bonn"
-      }
-    }
-    </script>
-  </head>
-  <body>
-    <main>
-      <h1>Benjamin Born</h1>
-      <p class="muted">Professor of Macroeconomics</p>
-      <p class="muted">University of Bonn</p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benjamin Born</title>
+  <meta name="description" content="Benjamin Born — Professor of Macroeconomics. Research, working papers, publications, and contact.">
+  <style>
+    /* No‑nonsense, static layout similar to the referenced page */
+    :root{--text:#222;--muted:#475569;--border:#e5e7eb;--link:#0b57d0;--bg:#fff}
+    @media (prefers-color-scheme: dark){:root{--text:#e5e7eb;--muted:#94a3b8;--border:#1f2937;--link:#93c5fd;--bg:#0b1020}}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:var(--link)}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    header{padding:8px 0}
+    header .name{font-size:26px;font-weight:600;margin:0}
 
-      <div style="margin-top: 1rem;">
-        <p>Email: <a href="mailto:b.born@uni-bonn.de">b.born@uni-bonn.de</a></p>
-        <p><a href="Born_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a></p>
+    /* Intro block: photo left, text right */
+    .intro{display:grid;grid-template-columns:320px 1fr;gap:36px;align-items:start;margin:36px 0 24px}
+    @media(max-width:900px){.intro{grid-template-columns:1fr;gap:16px}}
+    .intro img{width:300px;height:300px;object-fit:cover;border-radius:4px;border:1px solid var(--border)}
+    .intro p{margin:0 0 12px}
+
+    h3{font-size:18px;margin:28px 0 8px}
+    .list{list-style:square;margin:0 0 0 18px;padding:0}
+    .list li{margin:8px 0}
+
+    .spacer{height:8px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1 class="name">Benjamin Born</h1>
+    </header>
+
+    <section class="intro">
+      <div>
+        <img src="files/born_profile.jpg" alt="Portrait of Benjamin Born" loading="lazy">
       </div>
+      <div>
+        <p><strong>Professor of Macroeconomics</strong></p>
+        <p><a href="https://www.mee.uni-bonn.de">Institute for Macroeconomics & Econometrics</a></p>
+        <p><a href="https://www.econ.uni-bonn.de/en">University of Bonn</a></p>
+        <p>Contact: <a href="mailto:b.born&#64;uni-bonn.de">b.born&#64;uni-bonn.de</a></p>
+        <p>CV: <a href="files/cv_born.pdf">pdf</a></p>
+        <p>Research: <a href="https://scholar.google.com/citations?user=bn6OZssAAAAJ&hl=en">Google Scholar</a> | <a href="https://ideas.repec.org/f/pbo471.html">IDEAS/RePEc</a></p>
+      </div>
+    </section>
 
-      <footer class="muted">
-        <span class="pill">This is a minimal placeholder page while the site is being updated.</span>
-      </footer>
-    </main>
-  </body>
+    <h3><strong>Current research/working papers</strong></h3>
+    <ul class="list">
+      <li><a href="files/BBM_Interest_Oct2025.pdf">The Impact of Interest: Firms’ Investment Sensitivity to Interest Rates</a> (with Lea Best and Manuel Menkhoff), October 2025, CEPR Discussion Paper 20695. Summary on <a href="https://cepr.org/voxeu/columns/impact-interest-how-loan-rates-shape-firm-investment">VoxEU</a>.</li>
+      <li><a href="files/BEMMN_MicroMacroNews_Oct2025.pdf">Firm Expectations and News: Micro v Macro</a> (with Zeno Enders, Manuel Menkhoff, Gernot Müller, and Knut Niemann), October 2025, CEPR Discussion Paper 17768. Summary on <a href="https://cepr.org/voxeu/columns/island-illusion-how-firms-react-news">VoxEU</a>.</li>
+      <li><a href="files/BMPW_Spreads_July2025.pdf">Different no more: Country spreads in advanced and emerging economies</a> (with Gernot Müller, Johannes Pfeifer, and Susanne Wellmann), July 2025, CEPR Discussion Paper 14392. Summary on <a href="https://cepr.org/voxeu/columns/unpleasant-convergence-country-spreads-advanced-and-emerging-economies">VoxEU</a>.</li>
+      <li><a href="files/BHMP_AnchorUncertainty_Apr2025.pdf">Anchored in Troubled Waters: Monetary Unions and Uncertainty</a> (with Luis Huxel, Gernot Müller, and Johannes Pfeifer), April 2025, CEPR Discussion Paper 15579. Summary on <a href="https://cepr.org/voxeu/columns/anchored-troubled-waters-why-economic-and-monetary-union-membership-less-bad-you">VoxEU</a>.</li>
+      <li><a href="files/BBMW_MP_Labor_Jul2025.pdf">Who Feels the Boom? Labor Market Tightness and the Heterogeneous Employment Effects of Monetary Policy</a> (with Nittai Bergman, David Matsa, and Michael Weber), March 2025, Mimeo, Frankfurt School. <strong>Journal of Monetary Economics</strong> (revise & resubmit).</li>
+      <li><a href="files/BBGKLW_Unconventional_Fiscal_Policy_Apr2025.pdf">A Temporary VAT Cut as Unconventional Fiscal Policy</a> (with Rüdiger Bachmann, Olga Goldfayn-Frank, Georgi Kocharkov, Ralph Luetticke, and Michael Weber), August 2024, NBER Working Paper 29442. <strong>Review of Economic Studies</strong> (conditionally accepted). Summary on <a href="https://cepr.org/voxeu/columns/temporary-vat-cut-unconventional-fiscal-policy">VoxEU</a>.</li>
+      <li><a href="files/BDLSS_InflationTwitter_Aug2024.pdf">Inflation Expectations in the Social Media Age</a> (with Hrishbh Dalal, Nora Lamersdorf, and Sascha Steffen), September 2023, Mimeo, Frankfurt School.</li>
+    </ul>
+
+    <div class="spacer"></div>
+
+    <h3><strong>Selected publications</strong></h3>
+    <ul class="list">
+      <li><a href="files/BBL_Inequality_Sep2023.pdf">Shocks, Frictions, and Inequality in US Business Cycles</a> (with Christian Bayer and Ralph Luetticke), <strong>American Economic Review</strong>, 114(5), pp. 1211–1247 (lead article), May 2024. DOI: <a href="https://doi.org/10.1257/aer.20201875">link</a>.</li>
+      <li><a href="files/BDMP_MrKeynes_July2023.pdf">Mr. Keynes meets the Classics: Government Spending and the Real Exchange Rate</a> (with Francesco D’Ascanio, Gernot Müller, and Johannes Pfeifer), <strong>Journal of Political Economy</strong>, 132(5), pp. 1642–1683, May 2024. DOI: <a href="https://doi.org/10.1086/727707">link</a>.</li>
+      <!-- <li><a href="/files/TO_FILL.pdf">Expectation Dispersion, Uncertainty, and the Reaction to News</a> (with Jonas Dovern and Zeno Enders), <strong>European Economic Review</strong>, 154, 104440, May 2023. DOI: <a href="https://doi.org/10.1016/j.euroecorev.2023.104440">link</a></li> -->
+      <li><a href="files/BBLM_Covid_May2022.pdf">The Coronavirus Stimulus Package: How Large is the Transfer Multiplier?</a> (with Christian Bayer, Ralph Luetticke, and Gernot Müller), <strong>Economic Journal</strong>, 133(652), pp. 1318–1347, May 2023. DOI: <a href="https://doi.org/10.1093/ej/uead003">link</a>.</li>
+      <li><a href="files/BBL_Fiscal_Liquidity_July_2022.pdf">The Liquidity Channel of Fiscal Policy</a> (with Christian Bayer and Ralph Luetticke), <strong>Journal of Monetary Economics</strong>, 134, pp. 86–117, March 2023. DOI: <a href="https://doi.org/10.1016/j.jmoneco.2022.11.009">link</a>.</li>
+      <!-- <li><a href="/files/TO_FILL.pdf">The Macroeconomic Impact of Trump</a> (with Gernot Müller, Moritz Schularick, and Petr Sedlacek), <strong>Policy Studies</strong>, 42(5–6), pp. 580–591, October 2021. DOI: <a href="https://doi.org/10.1080/01442872.2021.1909718">link</a></li> -->
+      <li><a href="files/BP_2020_markup_wp.pdf">Uncertainty-Driven Business Cycles: Assessing the Markup Channel</a> (with Johannes Pfeifer), <strong>Quantitative Economics</strong>, 12(2), pp. 587–623, May 2021. DOI: <a href="https://doi.org/10.3982/QE1297">link</a>.</li>
+      <!-- <li><a href="/files/TO_FILL.pdf">The Lockdown Effect: A Counterfactual for Sweden</a> (with Alexander Dietrich and Gernot Müller), <strong>PLOS ONE</strong>, 16(4), April 2021. DOI: <a href="https://doi.org/10.1371/journal.pone.0249732">link</a></li> -->
+      <!-- <li><a href="/files/TO_FILL.pdf">The New Keynesian Wage Phillips Curve: Calvo vs. Rotemberg</a> (with Johannes Pfeifer), <strong>Macroeconomic Dynamics</strong>, 24(5), pp. 1017–1041, July 2020. DOI: <a href="https://doi.org/10.1017/S1365100518000615">link</a></li> -->
+      <li><a href="files/BMP_Austerity_2019.pdf">Does Austerity Pay Off?</a> (with Gernot Müller and Johannes Pfeifer), <strong>Review of Economics and Statistics</strong>, 102(2), pp. 323–338, May 2020. DOI: <a href="https://doi.org/10.1162/rest_a_00844">link</a>.</li>
+      <li><a href="files/BMSS_Brexit_2019.pdf">The Costs of Economic Nationalism: Evidence from the Brexit Experiment</a> (with Gernot Müller, Moritz Schularick, and Petr Sedlacek), <strong>Economic Journal</strong>, 129(623), pp. 2722–2744, October 2019. DOI: <a href="https://doi.org/10.1093/ej/uez020">link</a>.</li>
+      <li><a href="files/BBEG_2018wp.pdf">Time-Varying Business Volatility and the Price Setting of Firms</a> (with Rüdiger Bachmann, Steffen Elstner, and Christian Grimme), <strong>Journal of Monetary Economics</strong>, 101, pp. 82–99, January 2019. DOI: <a href="https://doi.org/10.1016/j.jmoneco.2018.07.013">link</a>.</li>
+      <!-- <li><a href="/files/TO_FILL.pdf">Uncertainty and the Great Recession</a> (with Sebastian Breuer and Steffen Elstner), <strong>Oxford Bulletin of Economics and Statistics</strong>, 80(5), pp. 951–971, October 2018. DOI: <a href="https://doi.org/10.1111/obes.12229">link</a></li> -->
+      <!-- <li><a href="/files/TO_FILL.pdf">Testing for Serial Correlation in Fixed-Effects Panel Data Models</a> (with Jörg Breitung), <strong>Econometric Reviews</strong>, 35(7), pp. 1290–1316, July 2016. DOI: <a href="https://doi.org/10.1080/07474938.2014.976524">link</a></li> -->
+      <!-- <li><a href="/files/TO_FILL.pdf">Recursive Adjustment for General Deterministic Components and Improved Tests for the Cointegration Rank</a> (with Matei Demetrescu), <strong>Journal of Time Series Econometrics</strong>, 7(2), pp. 143–179, July 2015. DOI: <a href="https://doi.org/10.1515/jtse-2013-0005">link</a></li> -->
+      <li><a href="files/BP_RiskMatters_Comment_2014.pdf">Risk Matters: The Real Effects of Volatility Shocks: Comment</a> (with Johannes Pfeifer), <strong>American Economic Review</strong>, 104(12), pp. 4231–4239, December 2014. DOI: <a href="https://doi.org/10.1257/aer.104.12.4231">link</a>.</li>
+      <li><a href="files/BornPfeifer2014_WP.pdf">Policy Risk and the Business Cycle</a> (with Johannes Pfeifer), <strong>Journal of Monetary Economics</strong>, 68, pp. 68–85, November 2014. DOI: <a href="https://doi.org/10.1016/j.jmoneco.2014.07.012">link</a>.</li>
+      <li>Central Bank Communication on Financial Stability (with Michael Ehrmann and Marcel Fratzscher), <strong>Economic Journal</strong>, 124(577), pp. 701–734, June 2014. DOI: <a href="https://doi.org/10.1111/ecoj.12039">link</a>.</li>
+      <!-- <li><a href="/files/TO_FILL.pdf">Fiscal News and Macroeconomic Volatility</a> (with Alexandra Peter and Johannes Pfeifer), <strong>Journal of Economic Dynamics and Control</strong>, 37(12), pp. 2582–2601, December 2013. DOI: <a href="https://doi.org/10.1016/j.jedc.2013.06.011">link</a></li> -->
+      <!-- <li><a href="/files/TO_FILL.pdf">Exchange Rate Regimes and Fiscal Multipliers</a> (with Falko Juessen and Gernot Müller), <strong>Journal of Economic Dynamics and Control</strong>, 37(2), pp. 446–465, February 2013. DOI: <a href="https://doi.org/10.1016/j.jedc.2012.09.014">link</a></li> -->
+      <!-- <li><a href="/files/TO_FILL.pdf">Communicating about Macroprudential Supervision – A New Challenge for Central Banks</a> (with Michael Ehrmann and Marcel Fratzscher), <strong>International Finance</strong>, 15(2), pp. 179–203, Summer 2012. DOI: <a href="https://doi.org/10.1111/j.1468-2362.2012.01301.x">link</a></li> -->
+      <!-- <li><a href="/files/TO_FILL.pdf">Government Spending Shocks in Quarterly and Annual Time Series</a> (with Gernot Müller), <strong>Journal of Money, Credit and Banking</strong>, 44(2–3), pp. 507–517, March–April 2012. DOI: <a href="https://doi.org/10.1111/j.1538-4616.2011.00498.x">link</a></li> -->
+      <!-- <li><a href="/files/TO_FILL.pdf">Simple Regression-Based Tests for Spatial Dependence</a> (with Jörg Breitung), <strong>Econometrics Journal</strong>, 14(2), pp. 330–342, July 2011. DOI: <a href="https://doi.org/10.1111/j.1368-423X.2010.00338.x">link</a></li> -->
+    </ul>
+
+    <div class="spacer"></div>
+
+    <h3><strong>Other writing</strong></h3>
+    <ul class="list">
+      <li><a href="files/BEM_FIRE_Handbook_2023.pdf">On FIRE, news, and expectations</a> (with Zeno Enders and Gernot Müller), in: Ingo Köhler, Laetitia Lenel, Alexander Nützenadel, and Jochen Streb (eds.), <strong>Handbook of Economic Expectations in Historical Perspective</strong>, Routledge, 2025. DOI: <a href="https://www.taylorfrancis.com/books/oa-edit/10.4324/9781003379010/routledge-handbook-economic-expectations-historical-perspective-ingo-köhler-laetitia-lenel-alexander-nützenadel-jochen-streb">link</a>.</li>
+      <li><a href="files/BBGKLW_UFP_at_Work_Jan2023.pdf">Unconventional Fiscal Policy at Work</a> (with Rüdiger Bachmann, Olga Goldfayn-Frank, Georgi Kocharkov, Ralph Luetticke, and Michael Weber), <strong>AEA Papers & Proceedings</strong>, 113, pp. 61–64, May 2023. DOI: <a href="https://doi.org/10.1257/pandp.20231036">link</a>.</li>
+      <li><a href="files/BEMN_2022_Chap15_FirmExp.pdf">Firm expectations about their output and prices: Facts, determinants, and effects</a> (with Zeno Enders, Knut Niemann, and Gernot Müller), in: Rüdiger Bachmann, Giorgio Topa, and Wilbert van der Klaauw (eds.), <strong>Handbook of Economic Expectations</strong>, Elsevier, 2023. DOI: <a href="https://doi.org/10.1016/B978-0-12-822927-9.00019-7">link</a>.</li>
+    </ul>
+
+
+    <div style="height:24px"></div>
+
+  </div>
+</body>
 </html>
+
+<script>
+for (const a of document.querySelectorAll('a[href^="http"]')) {
+  if (a.hostname !== location.hostname) {
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+  }
+}
+</script>
