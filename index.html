@@ -6,29 +6,93 @@
   <title>Benjamin Born</title>
   <meta name="description" content="Benjamin Born — Professor of Macroeconomics. Research, working papers, publications, and contact.">
   <style>
-    /* No‑nonsense, static layout similar to the referenced page */
-    :root{--text:#222;--muted:#475569;--border:#e5e7eb;--link:#0b57d0;--bg:#fff}
-    @media (prefers-color-scheme: dark){:root{--text:#e5e7eb;--muted:#94a3b8;--border:#1f2937;--link:#93c5fd;--bg:#0b1020}}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-    a{color:var(--link)}
-    .wrap{max-width:1000px;margin:0 auto;padding:16px}
-    header{padding:8px 0}
-    header .name{font-size:26px;font-weight:600;margin:0}
+  /* No-nonsense, static layout similar to the referenced page */
+  :root{
+    --text:#222;
+    --muted:#475569;
+    --border:#e5e7eb;
+    --link:#0b57d0;
+    --bg:#fff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+      --border:#1f2937;
+      --link:#93c5fd;
+      --bg:#0b1020;
+    }
+  }
 
-    /* Intro block: photo left, text right */
-    .intro{display:grid;grid-template-columns:320px 1fr;gap:36px;align-items:start;margin:36px 0 24px}
-    @media(max-width:900px){.intro{grid-template-columns:1fr;gap:16px}}
-    .intro img{width:300px;height:300px;object-fit:cover;border-radius:4px;border:1px solid var(--border)}
-    .intro p{margin:0 0 12px}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  }
+  a{color:var(--link)}
 
-    h3{font-size:18px;margin:28px 0 8px}
-    .list{list-style:square;margin:0 0 0 18px;padding:0}
-    .list li{margin:8px 0}
+  .wrap{max-width:1000px;margin:0 auto;padding:16px}
 
-    .spacer{height:8px}
-  </style>
+  header{padding:8px 0}
+  header .name{font-size:26px;font-weight:600;margin:0}
+
+  /* Intro block: photo left, text right */
+  .intro{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:36px;
+    align-items:start;
+    margin:36px 0 24px;
+  }
+  @media(max-width:900px){
+    .intro{grid-template-columns:1fr;gap:16px}
+  }
+
+  /* Responsive portrait (shrinks on mobile, stays 300px on desktop) */
+  .intro img{
+    width:100%;
+    max-width:300px;
+    aspect-ratio:1 / 1;
+    height:auto;
+    object-fit:cover;
+    border-radius:4px;
+    border:1px solid var(--border);
+  }
+  @media(max-width:900px){
+    .intro img{max-width:280px}
+  }
+
+  .intro p{margin:0 0 12px}
+
+  /* Section headings */
+  h3{font-size:18px;margin:28px 0 8px}
+
+  /* Lists: readable line length for long titles */
+  .list{
+    list-style:square;
+    margin:0 0 0 18px;
+    padding:0;
+    max-width:90ch;
+  }
+  .list li{margin:8px 0}
+
+  .spacer{height:8px}
+
+  /* Bio block */
+  .bio{
+    max-width:75ch;
+    margin:16px 0 18px;
+    border-top:1px solid var(--border);
+    padding-top:14px;
+    color:var(--muted);
+    font-size:16px;
+  }
+  .bio p{margin:0 0 10px}
+</style>
+
 </head>
 <body>
   <div class="wrap">
@@ -49,6 +113,12 @@
         <p>Research: <a href="https://scholar.google.com/citations?user=bn6OZssAAAAJ&hl=en">Google Scholar</a> | <a href="https://ideas.repec.org/f/pbo471.html">IDEAS/RePEc</a></p>
       </div>
     </section>
+
+<section class="bio">
+  <p>Benjamin Born is Professor of Macroeconomics at the University of Bonn and Research Director at the ifo Institute. His research spans business cycles, fiscal and monetary policy, heterogeneous&#8209;agent macroeconomics, and household and firm expectations.</p>
+
+  <p>He is a Research Fellow at CEPR and CESifo and advises the European Central Bank (DG Economics) and the European Commission (DG ECFIN). He serves on the European Parliament’s Expert Group on Monetary Policy and the CEPR–EABCN Euro Area Business Cycle Dating Committee, and is on the editorial boards of the <em>Journal of Monetary Economics</em> and the <em>European Economic Review</em>.</p>
+</section>
 
     <h3><strong>Current research/working papers</strong></h3>
     <ul class="list">
@@ -103,8 +173,6 @@
     <div style="height:24px"></div>
 
   </div>
-</body>
-</html>
 
 <script>
 for (const a of document.querySelectorAll('a[href^="http"]')) {
@@ -114,3 +182,5 @@ for (const a of document.querySelectorAll('a[href^="http"]')) {
   }
 }
 </script>
+</body>
+</html>
